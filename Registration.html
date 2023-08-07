@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .bord {
+            border: 1px solid whitesmoke;
+            background-color: grey;
+            padding: 15px;
+           border-radius: 25px;
+           margin-left: 50px;
+            display: none;    
+        }
+
+
+
+
+        table,
+        td,
+        tr {
+            padding: 15px;
+        }
+
+        button {
+            border-radius: 30%;
+            background-color: aqua;
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Registration Page </h1>
+        <button class="open-button" onclick="openForm()">Do You Want to Open the Form?<br>
+            CLICK ME!</button>
+
+        <div class="bord" id="myForm" style="margin-left: 40px;">
+
+            <center>
+                <h1 style="color: red;">Registration Form</h1>
+            </center>
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td colspan="1"><label for="Name">Name:</label></td>
+                        <td colspan="1">
+                            <input type="text" name="Name" onclick="mypop1()"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for="PassWord">Password:</label></td>
+                        <td> <input type="password" name="PassWord"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="Confirm">Confirm Password:</label></td>
+                        <td> <input type="password" name="Confirm"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="DOB">DOB:</label></td>
+                        <td><input type="date"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="Gender">Gender:</label></td>
+                        <td>
+                            <input type="radio" name="Gender" id="Male">Male
+                            <input type="radio" name="Gender" id="Female">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Address">Address:</label>
+                        </td>
+                        <td><textarea name="Address" id="Address" cols="30" rows="8"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Mobile">Mobile Number:</label></td>
+                        <td><input type="number" name="Mobile"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Submit">
+                        </td>
+                        <td><input type="button" value="Close Form" onclick="closeForm()"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
